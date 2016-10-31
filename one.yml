@@ -5,11 +5,12 @@
   tasks:
   - name: Add ansible user
     user:
-	name: ansible
-	state: present
-	generate_ssh_keys: true
+      name: ansible
+      state: present
+      generate_ssh_keys: true
+  
   - name: Ensure that NTP is available
-	service:  
-	apt:
-		state:present
+    apt:
+      name: ntp
+      state:present
 
