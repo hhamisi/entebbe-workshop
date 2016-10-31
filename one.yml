@@ -13,4 +13,7 @@
     apt:
       name: ntp
       state: present
-
+  -name: Ensure that NTP service is started
+   service:
+     name: ntp
+     state: started
