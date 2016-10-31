@@ -3,12 +3,12 @@
   hosts:all
   sudo:true
   tasks:
-  - name:Add ansible user
-  apt:
-	name:ansible
-	state:present
-	generate_ssh_keys:true
-- name: Ensure that NTP is available
+  - name: Add ansible user
+    user:
+	name: ansible
+	state: present
+	generate_ssh_keys: true
+  - name: Ensure that NTP is available
 	service:  
 	apt:
 		state:present
